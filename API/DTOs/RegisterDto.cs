@@ -6,10 +6,10 @@ namespace API.DTOs;
 public class RegitserDto
 {
     [Required]
-    [MaxLength(100)]
-    public required string UserName { get; set; }
+    public string UserName { get; set; } = string.Empty;
 
     [Required]
-    public required string Password { get; set; }
+    [StringLength(8, MinimumLength =4)]
+    public string Password { get; set; } = string.Empty;
 }
 
